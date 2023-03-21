@@ -1,0 +1,40 @@
+name: build unified data sample file
+on: [push]
+jobs:
+  build_file:
+    name: build unified data sample file
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Run script
+        uses: jannekem/run-python-script-action@v1
+        with:
+          script: |
+            import os, json, shutil
+            with open("LidarDataSamples.json", "r+") as t:
+              t.truncate(0)
+              t.write('[')
+              for filename in os.scandir('Data_Samples'):
+                print(filename)
+                with open(filename, "r") as f:
+                  content = f.read()
+                  t.write(content)
+                  t.write(',')
+              t.write(']')
+            barak = open("LidarDataSamples.json", "r+")
+            contentb = barak.read()
+            print(contentb)
+      - name: push file to main
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'LidarDataSamples.json'
+          committer_name: Andy Clifton (action)
+          committer_email: andy.clifton@enviconnect.de
+          default_author: github_actor
+          message: 'Update unified data sample file'
+          push: true
