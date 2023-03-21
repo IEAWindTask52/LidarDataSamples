@@ -4,7 +4,7 @@ jobs:
   build_file:
     name: build unified data sample file
     runs-on: ubuntu-latest
-    if: github.actor == 'AndyClifton'
+    if: github.actor != 'GithubActions'
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
@@ -25,5 +25,5 @@ jobs:
           git config user.name "GithubActions"
           git config user.email "github-actions@github.com"
           git add --all
-          git commit -am "created by Github action"
+          git commit -am "created by Github action [skip actions]"
           git push
