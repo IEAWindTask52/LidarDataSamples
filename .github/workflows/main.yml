@@ -4,7 +4,7 @@ jobs:
   build_file:
     name: build unified data sample file
     runs-on: ubuntu-latest
-    if: github.actor != 'GithubActions'
+    if: github.actor == 'AndyClifton'
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
