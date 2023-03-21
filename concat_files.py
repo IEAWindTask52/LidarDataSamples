@@ -4,15 +4,18 @@ import pathlib
 import pandas
 import json
 import shutil
+import tabulate
 
 directory = 'Data_Samples'
-file_type = ".json"
+source_file_type = ".json"
+output_json_file = "LidarDataSamples.json"
+output_md_file = "LidarDataSamples.md"
 
-# generate a list of files
-files = list(pathlib.Path(directory).glob('*' + file_type))
+# generate a list of JSON files
+files = list(pathlib.Path(directory).glob('*' + source_file_type))
 
 # concatenate all of the json data into one big file
-with open("LidarDataSamples.json", "w") as t:
+with open(output_json_file, "w") as t:
     t.write('{\n')
     t.write('\t"Data samples":  {\n')
     t.write('\t\t"Data sample":  [\n')
@@ -37,6 +40,11 @@ with open("LidarDataSamples.json", "w") as t:
     t.write('\t}\n')
     t.write('}')
 
-# read the table and convert to markdown
-# with open("LidarDataSamples.json", "r") as t:
-#    data = t.read()
+# read the JSON file and convert to a markdown table for Github
+fileData = json.load(open(output_json_file))
+df = pandas.DataFrame.from_dict(fileData)
+#print(tabulate.tabulate(df['Data samples']['Data sample'], tablefmt="github"))
+with open(output_md_file, "w") as t:
+    t.write(tabulate.tabulate(df['Data samples']
+            ['Data sample'], tablefmt="github"))
+# t.write(df.to_markdown(showindex=False))
