@@ -4,7 +4,7 @@ jobs:
   build_file:
     name: build unified data sample file
     runs-on: ubuntu-latest
-    if: github.actor != 'github-actions'
+    if: github.actor != 'GithubActions'
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
@@ -22,8 +22,8 @@ jobs:
         run: python templates/build_README.py
       - name: commit to main
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name "GithubActions"
+          git config user.email "github-actions@github.com"
           git add --all
           git commit -am "created by Github action"
           git push
