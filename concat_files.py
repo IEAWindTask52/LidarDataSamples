@@ -43,8 +43,6 @@ with open(output_json_file, "w") as t:
 # read the JSON file and convert to a markdown table for Github
 fileData = json.load(open(output_json_file))
 df = pandas.DataFrame.from_dict(fileData)
-#print(tabulate.tabulate(df['Data samples']['Data sample'], tablefmt="github"))
 with open(output_md_file, "w") as t:
     t.write(tabulate.tabulate(df['Data samples']
-            ['Data sample'], tablefmt="github"))
-# t.write(df.to_markdown(showindex=False))
+            ['Data sample'], tablefmt="github", headers="keys"))
