@@ -6,16 +6,18 @@ import json
 import shutil
 import tabulate
 
-directory = 'Data_Samples'
+source_directory = 'Data_Samples'
 source_file_type = ".json"
+output_directory = "."
 output_json_file = "LidarDataSamples.json"
 output_md_file = "LidarDataSamples.md"
 
 # generate a list of JSON files
-files = list(pathlib.Path(directory).glob('*' + source_file_type))
+files = list(pathlib.Path(source_directory).glob('*' + source_file_type))
+print(files)
 
 # concatenate all of the json data into one big file
-with open(output_json_file, "w") as t:
+with open(os.path.join(output_directory, output_json_file), "w") as t:
     t.write('{\n')
     t.write('\t"Data samples":  {\n')
     t.write('\t\t"Data sample":  [\n')
@@ -41,8 +43,8 @@ with open(output_json_file, "w") as t:
     t.write('}')
 
 # read the JSON file and convert to a markdown table for Github
-fileData = json.load(open(output_json_file))
+fileData = json.load(open(os.path.join(output_directory, output_json_file)))
 df = pandas.DataFrame.from_dict(fileData)
-with open(output_md_file, "w") as t:
+with open(os.path.join(output_directory, output_md_file), "w") as t:
     t.write(tabulate.tabulate(df['Data samples']
             ['Data sample'], tablefmt="github", headers="keys"))
