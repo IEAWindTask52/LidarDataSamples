@@ -1,13 +1,16 @@
-# LidarDataSamples
+# Lidar Data Samples
 
 This repository provides links to wind lidar data samples with known provenance.
 
-## Looking for data samples?
+## Data samples
 
 |   id | Title   | Description   | Lidar type   | Lidar type concept URL   | Data provider   | Data provider URL         |   Data sample provided date | Data sample URL                                                          | Data sample license   | Data sample license name   | Data sample license URL   |
 |------|---------|---------------|--------------|--------------------------|-----------------|---------------------------|-----------------------------|--------------------------------------------------------------------------|-----------------------|----------------------------|---------------------------|
 |    1 | ZX300   |               | ZX300 copy   |                          | ZX Lidars       | https://www.zxlidars.com/ |                    20230321 | https://drive.google.com/drive/folders/1Ji7zaT7CWh9GXMvuC7MeJ48VsPws_9PP | none                  |                            |                           |
 |    2 | ZX300   |               | ZX300        |                          | ZX Lidars       | https://www.zxlidars.com/ |                    20230321 | https://drive.google.com/drive/folders/1Ji7zaT7CWh9GXMvuC7MeJ48VsPws_9PP |                       | none                       | none                      |
+
+## Add a data sample
+Please 
 
 <details>
 <summary>Notes for maintainers</summary>
