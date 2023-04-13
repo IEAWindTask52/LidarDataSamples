@@ -1,4 +1,0 @@
-|    | Device   | Provider                                        | Description                            | Link to data                                                                                 | License                     |
-|----|----------|-------------------------------------------------|----------------------------------------|----------------------------------------------------------------------------------------------|-----------------------------|
-|  0 | ZX300    |                                                 | [ZX Lidars](https://www.zxlidars.com/) | [drive.google.com](https://drive.google.com/drive/folders/1Ji7zaT7CWh9GXMvuC7MeJ48VsPws_9PP) | [none](none)                |
-|  1 | ZX300    | Copy of another file to test file concatenation | [ZX Lidars](https://www.zxlidars.com/) | [drive.google.com](https://drive.google.com/drive/folders/1Ji7zaT7CWh9GXMvuC7MeJ48VsPws_9PP) | [no license provided](none) |
