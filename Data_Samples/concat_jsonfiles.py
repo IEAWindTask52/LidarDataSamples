@@ -5,6 +5,7 @@ import pandas
 import json
 import shutil
 import tabulate
+import urllib.parse
 
 source_directory = 'Data_Samples'
 source_file_type = ".json"
@@ -44,7 +45,40 @@ with open(os.path.join(output_directory, output_json_file), "w") as t:
 
 # read the JSON file and convert to a markdown table for Github
 fileData = json.load(open(os.path.join(output_directory, output_json_file)))
-df = pandas.DataFrame.from_dict(fileData)
+df_in = pandas.DataFrame.from_dict(fileData)
+
+# simplify the df
+df = pandas.DataFrame(df_in['Data samples']['Data sample'])
+
+# modify the df to have a short link to the data provider
+df['Data provider md'] = "[" + df['Data provider'] + \
+    "](" + df['Data provider URL'] + ")"
+
+# modify the df to have a short link to the data
+
+
+def md_formatted_link(url):
+    return "[" + urllib.parse.urlparse(url).netloc + "](" + url + ")"
+
+
+df['Data sample URL md'] = df.apply(
+    lambda row: md_formatted_link(row['Data sample URL']), axis=1)
+
+# modify the df to have a short link to the license
+df['Data license md'] = "[" + df['Data sample license name'] + \
+    "](" + df['Data sample license URL'] + ")"
+
+# choose the outputs we want
+tablecols = ['Title',
+             'Data provider md',
+             'Description',
+             'Data sample URL md',
+             "Data license md"]
+tableheaders = ['Device',
+                'Provider',
+                'Description',
+                'Link to data',
+                'License']
 with open(os.path.join(output_directory, output_md_file), "w") as t:
-    t.write(tabulate.tabulate(df['Data samples']
-            ['Data sample'], tablefmt="github", headers="keys"))
+    t.write(tabulate.tabulate(df[df.columns.intersection(
+        tablecols)], headers=tableheaders, tablefmt="github"))
