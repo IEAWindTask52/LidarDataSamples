@@ -75,8 +75,8 @@ tablecols = ['Title',
              'Data sample URL md',
              "Data license md"]
 tableheaders = ['Device',
-                'Provider',
                 'Description',
+                'Provider',
                 'Link to data',
                 'License']
 with open(os.path.join(output_directory, output_md_file), "w") as t:
