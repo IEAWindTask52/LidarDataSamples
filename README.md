@@ -6,10 +6,10 @@ This repository provides links to wind lidar data samples with known provenance.
 
 ## Data samples
 
-|   id | Title   | Description   | Lidar type   | Lidar type concept URL   | Data provider   | Data provider URL         |   Data sample provided date | Data sample URL                                                          | Data sample license name   | Data sample license URL   |
-|------|---------|---------------|--------------|--------------------------|-----------------|---------------------------|-----------------------------|--------------------------------------------------------------------------|----------------------------|---------------------------|
-|    1 | ZX300   |               | ZX300 copy   |                          | ZX Lidars       | https://www.zxlidars.com/ |                    20230321 | https://drive.google.com/drive/folders/1Ji7zaT7CWh9GXMvuC7MeJ48VsPws_9PP | no license provided        | none                      |
-|    2 | ZX300   |               | ZX300        |                          | ZX Lidars       | https://www.zxlidars.com/ |                    20230321 | https://drive.google.com/drive/folders/1Ji7zaT7CWh9GXMvuC7MeJ48VsPws_9PP | none                       | none                      |
+|    | Device   | Provider                                        | Description                            | Link to data                                                                                 | License                     |
+|----|----------|-------------------------------------------------|----------------------------------------|----------------------------------------------------------------------------------------------|-----------------------------|
+|  0 | ZX300    |                                                 | [ZX Lidars](https://www.zxlidars.com/) | [drive.google.com](https://drive.google.com/drive/folders/1Ji7zaT7CWh9GXMvuC7MeJ48VsPws_9PP) | [none](none)                |
+|  1 | ZX300    | Copy of another file to test file concatenation | [ZX Lidars](https://www.zxlidars.com/) | [drive.google.com](https://drive.google.com/drive/folders/1Ji7zaT7CWh9GXMvuC7MeJ48VsPws_9PP) | [no license provided](none) |
 
 ## Add a data sample
 
