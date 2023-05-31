@@ -39,7 +39,7 @@ Note that certain data have digital object identifiers (DOIs), meaning that they
 - a place to find one or two well-documented examples of data
 
 ### This place is _not_:
-- a place to find lots of wind lidar data from different wind lidar deployments. Please check [```Other data sources```](#Other-data-sources).
+- a place to find lots of wind lidar data from different wind lidar deployments. Please check [```Other data sources```](#other-data-sources).
 
 ### Add a data sample to this list
 
