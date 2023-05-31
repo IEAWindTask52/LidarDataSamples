@@ -35,11 +35,26 @@ Note that certain data have digital object identifiers (DOIs), meaning that they
 
 </details>
 
+### This list is:
+- a place to find one or two well-documented examples of data
+
+### This place is _not_:
+- a place to find lots of wind lidar data from different wind lidar deployments. Please check [```Other data sources```](#Other_data_sources).
+
 ### Add a data sample to this list
 
 If you would like to add a data sample, please [email Andy Clifton](mailto:andy.clifton@enviconnect.de).
 
 Data samples can be linked to from here, and can also be stored in this repository.
+
+### Criteria for inclusion in this list
+
+Data samples are included on this list if:
+
+- They are stored in a long-term repository, e.g., Zenodo, GitHub, A2e, or similar. Repositories that provide persistent digital identifiers (e.g., DOIs) are preferred.
+- They are in a well-defined format, e.g., the manufacturer's own data format
+- They are _either_ direct from the wind lidar _or_ direct from an output / conversion routine 
+- They are of known provenance, i.e., it is clear what has happened to them. This can be demonstrated through the addition of metadata.
 
 ## Other data sources
 
