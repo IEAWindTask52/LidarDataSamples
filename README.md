@@ -19,6 +19,7 @@ These data are provided for use by the community. Ideas for using them include:
 | 3   | WindCube 200s | 3-D scanning   | Manufacturer's own | Data provided by UTD through A2e                        | [a2e.energy.gov](https://a2e.energy.gov/ds/awaken/sc1.lidar.z02.00)                          | According to the metadata, data files are direct from the wind lidar and have not been modified. | [CC0 Public DomLinkin Dedication](https://a2e.energy.gov/license) |
 | 4   | Halo XR       | 3-D scanning   | Manufacturer's own | Data provided by PNNL through A2e                       | [a2e.energy.gov](https://a2e.energy.gov/ds/awaken/sa5.lidar.z01.00)                          | According to the metadata, data files are direct from the wind lidar and have not been modified. | [CC0 Public DomLinkin Dedication](https://a2e.energy.gov/license) |
 | 5   | Halo XR+      | 3-D scanning   | Manufacturer's own | Data provided by NREL through A2e                       | [a2e.energy.gov](https://a2e.energy.gov/ds/awaken/rt1.lidar.z02.00)                          | According to the metadata, data files are direct from the wind lidar and have not been modified. | [CC0 Public DomLinkin Dedication](https://a2e.energy.gov/license) |
+| 6   | MOLAS B300    | Vertical profiler | Manufacturer's own | Data provided by [MOVE Laser](http://en.movelaser.com/) | [data_samples/MOLAS/](data_samples/MOLAS) | Data are direct from the wind lidar and have not been modified. Please see the README file in that directory for more information. | [CC0 No Rights Reserved](https://creativecommons.org/public-domain/cc0/)
 
 Note that certain data have digital object identifiers (DOIs), meaning that they can be uniquely identified.
 
@@ -43,7 +44,7 @@ Note that certain data have digital object identifiers (DOIs), meaning that they
 
 ### Add a data sample to this list
 
-If you would like to add a data sample, please [email Andy Clifton](mailto:andy.clifton@enviconnect.de).
+If you would like to add a data sample, please [email Andy Clifton](mailto:andy.clifton@enerlace.de).
 
 Data samples can be linked to from here, and can also be stored in this repository.
 
@@ -62,4 +63,4 @@ Data samples are included on this list if:
 
 ### Add a data source to this list
 
-If you would like to add a data source to this list, please [email Andy Clifton](mailto:andy.clifton@enviconnect.de)
+If you would like to add a data source to this list, please [email Andy Clifton](mailto:andy.clifton@enerlace.de)
